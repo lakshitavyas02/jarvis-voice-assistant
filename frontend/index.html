@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jarvis - AI Voice Assistant</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="avatar-container">
+          <div class="avatar" id="jarvisAvatar">
+            <div class="avatar-ring"></div>
+            <div class="avatar-core"></div>
+          </div>
+        </div>
+        <h1 class="title">JARVIS</h1>
+        <p class="subtitle">AI Voice Assistant</p>
+      </header>
+
+      <!-- Status Display -->
+      <div class="status-container">
+        <div class="status" id="statusDisplay">
+          <i class="fas fa-circle status-indicator" id="statusIndicator"></i>
+          <span id="statusText">Ready to assist</span>
+        </div>
+      </div>
+
+      <!-- Chat Container -->
+      <div class="chat-container" id="chatContainer">
+        <div class="chat-messages" id="chatMessages">
+          <div class="message assistant-message">
+            <div class="message-avatar">
+              <i class="fas fa-robot"></i>
+            </div>
+            <div class="message-content">
+              <p>
+                Hello! I'm Jarvis, your AI voice assistant. You can speak to me
+                by clicking the microphone button or saying "Hey Jarvis".
+              </p>
+              <p><strong>Tips for better voice recognition:</strong></p>
+              <ul>
+                <li>
+                  🎤 <strong>Test your microphone</strong> using the button
+                  below
+                </li>
+                <li>🔊 Speak clearly and at normal volume</li>
+                <li>✅ Allow microphone permissions when prompted</li>
+                <li>🌐 Use Chrome or Edge for best compatibility</li>
+                <li>
+                  ⏹️ Click microphone or press Spacebar/Escape to stop speech
+                </li>
+                <li>
+                  🎵 Select a consistent voice in settings for best quality
+                </li>
+                <li>📱 If voice fails, you can always type your message</li>
+              </ul>
+              <p>How can I help you today?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="controls">
+        <!-- Voice Input -->
+        <div class="voice-controls">
+          <button class="mic-button" id="micButton">
+            <i class="fas fa-microphone" id="micIcon"></i>
+          </button>
+          <div class="voice-status" id="voiceStatus">
+            Click to speak • Spacebar shortcut • Click again to stop
+          </div>
+          <div class="mic-test-info">
+            <small
+              >💡 If you get "no-speech" errors, try speaking louder or check
+              your microphone settings</small
+            >
+            <br />
+            <button class="mic-test-button" id="micTestButton">
+              🎤 Test Microphone
+            </button>
+          </div>
+        </div>
+
+        <!-- Text Input -->
+        <div class="text-input-container">
+          <input
+            type="text"
+            id="textInput"
+            placeholder="Type your message here..."
+          />
+          <button class="send-button" id="sendButton">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Settings Panel -->
+      <div class="settings-panel" id="settingsPanel">
+        <div class="settings-header">
+          <h3>Settings</h3>
+          <button class="close-settings" id="closeSettings">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="settings-content">
+          <div class="setting-group">
+            <label for="voiceSelect">Voice:</label>
+            <select id="voiceSelect"></select>
+          </div>
+          <div class="setting-group">
+            <label for="speechRate"
+              >Speech Rate: <span id="rateValue">1.0</span></label
+            >
+            <input
+              type="range"
+              id="speechRate"
+              min="0.5"
+              max="2"
+              step="0.1"
+              value="1"
+            />
+          </div>
+          <div class="setting-group">
+            <div class="checkbox-container">
+              <input type="checkbox" id="wakeWordToggle" checked />
+              <label for="wakeWordToggle">Wake Word Detection</label>
+            </div>
+          </div>
+          <div class="setting-group">
+            <div class="checkbox-container">
+              <input type="checkbox" id="autoSpeak" checked />
+              <label for="autoSpeak">Auto-speak responses</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Button -->
+      <button class="settings-button" id="settingsButton">
+        <i class="fas fa-cog"></i>
+      </button>
+
+      <!-- Connection Status -->
+      <div class="connection-status" id="connectionStatus">
+        <i class="fas fa-wifi" id="connectionIcon"></i>
+        <span id="connectionText">Connecting...</span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
