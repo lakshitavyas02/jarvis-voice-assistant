@@ -2,6 +2,9 @@
 
 A browser-based AI voice assistant inspired by Marvel's Jarvis, built with HTML, CSS, JavaScript, and Flask backend integrated with OpenAI GPT. Now featuring real-time data integration and system control capabilities!
 
+![image](https://github.com/user-attachments/assets/2a830f65-99c4-4392-9d94-3f5597aba2ff)
+
+
 ## ✨ Features
 
 ### 🎙️ **Core Voice Features**
